@@ -4,7 +4,7 @@ import './App.css'
 const UserList = () => {
   const userdata = data.map((item) => {
     return (
-      <div className="user">
+      <div key={item._id} className="user">
         <h3>{item.name.first}</h3>
         <h4>{item.name.last}</h4>
       </div>
