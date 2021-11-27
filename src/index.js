@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Text from './Text'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Text text="Regular text" textsize={15} textcolor="black"/>
+    <Text text="Huge header" textsize={25} textcolor="black"/>
+    <Text text="Danger notification" textsize={15} textcolor="red"/>
+    <Text text="Underline text" textsize={20} textcolor="black" textunderline/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
