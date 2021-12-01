@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import SayHi from './components/sayHi';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SayHi />
   </React.StrictMode>,
   document.getElementById('root')
 );
