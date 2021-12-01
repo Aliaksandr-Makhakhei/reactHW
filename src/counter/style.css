@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    margin: 100px;
+}
+
+.counter {
+    margin: 20px 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button {
+    padding: 30px;
+    background-color: rgb(108, 189, 247);
+    border-radius: 50%;
+}
