@@ -13,7 +13,7 @@ const Dropdown = () => {
   return (
     <>
       <button onClick={onClickDropdown}>Extra options {dropdown ? "🔺" : "🔻"}</button>
-      {dropdown && (<ul>{options.map((item, index) => (<li key={index}>{item}</li>))}</ul>)}
+      {dropdown && (<ul>{options.map((item) => (<li key={item}>{item}</li>))}</ul>)}
     </>
   );
 };
