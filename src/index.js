@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Pagination from './components/Pagination';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Pagination />
   </React.StrictMode>,
   document.getElementById('root')
 );
