@@ -27,8 +27,8 @@ const Pagination = () => {
   const post = posts.map((post) => {
     return (
       <div key={post.id} className="post">
-        <img key={post.url} src={post.url} alt={post.title}></img>
-        <p key={post.title}>{post.title}</p>
+        <img src={post.url} alt={post.title}></img>
+        <p>{post.title}</p>
       </div>
     );
   });
