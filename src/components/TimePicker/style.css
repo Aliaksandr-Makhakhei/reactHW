@@ -1,0 +1,8 @@
+.timer {
+    display: flex;
+    text-align: center;
+}
+
+.two__dots {
+    margin: 0 20px;
+}
