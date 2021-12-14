@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import TimePicker from './components/TimePicker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TimePicker />
   </React.StrictMode>,
   document.getElementById('root')
 );
