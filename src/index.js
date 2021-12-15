@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Sauces from './components/Sauces';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Sauces />
   </React.StrictMode>,
   document.getElementById('root')
 );
