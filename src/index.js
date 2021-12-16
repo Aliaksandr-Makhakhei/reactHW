@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import NewPeople from './components/NewPeople';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NewPeople />
   </React.StrictMode>,
   document.getElementById('root')
 );
