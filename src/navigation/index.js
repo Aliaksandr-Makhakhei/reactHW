@@ -5,21 +5,16 @@ import {
   Route
 } from "react-router-dom";
 import NavBar from '../components/NavBar'
+import Figure from '../components/Figure'
 
 export default function App() {
   return (
     <Router>
       <div>
-      < NavBar />
+      <NavBar />
         <Switch>
-          <Route path="/figure/:item">
-          < NavBar />
-          </Route>
-          <Route path="/figure">
-            
-          </Route>
-          <Route path="/">
-          
+          <Route path="/figure/:type/:color/">
+           <Figure />
           </Route>
         </Switch>
       </div>

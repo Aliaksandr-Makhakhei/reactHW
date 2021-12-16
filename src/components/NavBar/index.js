@@ -5,10 +5,20 @@ import './style.css'
 const NavBar = () => {
     const params = useParams();
     const types = [1, 2];
-    const typeBtn = types.map((item) => {
+    const colors = ['red', 'gray', 'blue', 'cyan', 'yellow', 'orange'];
+
+    const typeBtn = types.map((type) => {
         return (
-            <Link key={item} to={`figure/${params.item}`}>
-            <button>{item}</button>
+            <Link key={type} to={`figure/${type}`}>
+                <button className="choose__figure">{type}</button>
+            </Link>
+        )
+    })
+
+    const figureColors = colors.map((color) => {
+        return (
+            <Link key={color} to={`${color}`}>
+            <button className="choose_color">{color}</button>
             </Link>
         )
     })
@@ -16,6 +26,7 @@ const NavBar = () => {
     return (
         <>
         {typeBtn} 
+        {figureColors}
         </>
     )
 }
