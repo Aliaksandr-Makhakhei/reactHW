@@ -12,7 +12,7 @@ const NewPeople = () => {
     }
 
     const names = peopleList.map((item, index) => {
-      return <div key={index}>{item}</div>;
+      return <div key={item}>{item}</div>;
     }); 
 
     return (
