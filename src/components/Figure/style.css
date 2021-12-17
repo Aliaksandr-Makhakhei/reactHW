@@ -1,5 +1,13 @@
-.figure {
+.square {
     width: 100px;
     height: 100px;
     background-color: aquamarine;
 }
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(253, 150, 53);
+    border-radius: 50%;
+}
+

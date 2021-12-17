@@ -1,32 +1,33 @@
 import React from "react";
-import {Link, useParams} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import './style.css'
 
 const NavBar = () => {
-    const params = useParams();
+    
+    const history = useHistory()
+
+
+
     const types = [1, 2];
-    const colors = ['red', 'gray', 'blue', 'cyan', 'yellow', 'orange'];
+    const colors = ['red', 'gray', 'blue', 'cyan', 'yellow', 'orange']
 
     const typeBtn = types.map((type) => {
         return (
-            <Link key={type} to={`figure/${type}`}>
-                <button className="choose__figure">{type}</button>
-            </Link>
+                <button  key={type} onClick = {() => {history.push(`/figure/${type}/`)}} className="choose__figure">{type}</button>
         )
     })
+   
 
-    const figureColors = colors.map((color) => {
+    const figureColor = colors.map((color) => {
         return (
-            <Link key={color} to={`${color}`}>
-            <button className="choose_color">{color}</button>
-            </Link>
+            <button key={color} onClick = {() => {history.push(`/figure/type/${color}`)}} className="choose__color">{color}</button>
         )
     })
 
     return (
         <>
         {typeBtn} 
-        {figureColors}
+        {figureColor} 
         </>
     )
 }
