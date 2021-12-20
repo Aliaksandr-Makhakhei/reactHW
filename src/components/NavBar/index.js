@@ -1,35 +1,35 @@
-import React from "react";
-import {Link, useHistory} from 'react-router-dom'
-import './style.css'
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import "./style.css";
 
 const NavBar = () => {
-    
-    const history = useHistory()
+  const [type, setType] = useState("");
+  const [color, setColor] = useState("");
+  const history = useHistory();
 
+  history.push(`/figure/${type}/${color}`);
 
+  const types = [1, 2];
+  const colors = ["red", "gray", "blue", "cyan", "yellow", "orange"];
 
-    const types = [1, 2];
-    const colors = ['red', 'gray', 'blue', 'cyan', 'yellow', 'orange']
-
-    const typeBtn = types.map((type) => {
-        return (
-                <button  key={type} onClick = {() => {history.push(`/figure/${type}/`)}} className="choose__figure">{type}</button>
-        )
-    })
-   
-
-    const figureColor = colors.map((color) => {
-        return (
-            <button key={color} onClick = {() => {history.push(`/figure/type/${color}`)}} className="choose__color">{color}</button>
-        )
-    })
-
+  const typeBtn = types.map((type) => {
     return (
-        <>
-        {typeBtn} 
-        {figureColor} 
-        </>
-    )
-}
+      <button key={type} onClick={() => setType(type)} className="choose__figure">{type}</button>
+    );
+  });
 
-export default NavBar
+  const figureColor = colors.map((color) => {
+    return (
+      <button key={color} onClick={() => setColor(color)} className="choose__color">{color}</button>
+    );
+  });
+
+  return (
+    <>
+      {typeBtn}
+      {figureColor}
+    </>
+  );
+};
+
+export default NavBar;

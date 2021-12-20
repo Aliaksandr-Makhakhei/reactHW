@@ -5,7 +5,6 @@ import {useParams} from 'react-router-dom'
 const Figure = () => {
 
     const [figureClass, setFigureClass] = useState('')
-    const [figureColor, setFigureColor] = useState('')
     const params = useParams();
 
     useEffect(() => {
@@ -16,16 +15,10 @@ const Figure = () => {
         }
       }, [params.type]);
 
-      useEffect(() => {
-        setFigureColor(params.color)
-      }, [params.color]);
-
-console.log(params.color);
-
     return (
-        <>
-        <div className={figureClass, figureColor}>123</div>
-        </>
+        <div className="wrapper"> 
+        <div className={figureClass} style={{backgroundColor: params.color}}>{figureClass}</div>
+        </div>
     )
 }
 
