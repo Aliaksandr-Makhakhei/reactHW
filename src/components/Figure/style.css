@@ -1,0 +1,10 @@
+.square, .circle{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: red;
+}
+
+.circle {
+    border-radius: 50%;
+}
